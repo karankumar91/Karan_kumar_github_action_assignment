@@ -21,8 +21,10 @@ jobs:
           echo test, and deploy your project.
       - uses: actions/setup-python@v4
         with:
-          python-version: '3.10' 
-      - name: Run test.py
+          python-version: '3.10'
+      - name: Add Two Numbers
         run: |
-          cd test
-          python test.py
+          num1 = int(input("Enter the first number: "))
+          num2 = int(input("Enter the second number: "))
+          sum = num1 + num2
+          print("The sum of", num1, "and", num2, "is", sum)
