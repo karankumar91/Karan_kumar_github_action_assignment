@@ -24,5 +24,5 @@ jobs:
           python-version: '3.10' 
       - name: Run test.py
         run: |
-          cd C:\Users\This pc\Desktop\github Action Assigment\.github\workflows\test
+          cd test
           python test.py
