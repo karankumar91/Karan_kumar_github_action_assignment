@@ -10,13 +10,15 @@ on:
 jobs:
   job1:
     runs-on: ubuntu-latest
+
     inputs:
       num1: # define the first number
         description: 'Enter the first number'
-        required: true
+        required: false
       num2: # define the second number
         description: 'Enter the second number'
-        required: true
+        required: false
+
     steps:
       - uses: actions/checkout@v3
       - name: Run a one-line script
