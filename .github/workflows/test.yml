@@ -10,7 +10,7 @@ on:
 jobs:
   job1:
     runs-on: ubuntu-latest
-    input:
+    inputs:
     num1: # define the first enter the number
       description: 'Enter the first number'
       required: true
