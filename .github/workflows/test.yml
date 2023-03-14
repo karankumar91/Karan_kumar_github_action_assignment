@@ -11,12 +11,12 @@ jobs:
   job1:
     runs-on: ubuntu-latest
     inputs:
-    num1: # define the first enter the number
-      description: 'Enter the first number'
-      required: true
-    num2: #define the second number
-      description: 'Enter the second number'
-      required: true
+      num1: # define the first number
+        description: 'Enter the first number'
+        required: true
+      num2: # define the second number
+        description: 'Enter the second number'
+        required: true
     steps:
       - uses: actions/checkout@v3
       - name: Run a one-line script
@@ -34,5 +34,5 @@ jobs:
         run: |
           cd test
           python test.py ${{ inputs.num1 }} ${{ inputs.num2 }}
-        name: print output
-        run: echo "${{ steps.add.outputs.sum }}"   
+      - name: print output
+        run: echo "${{ steps.add.outputs.sum }}" 
