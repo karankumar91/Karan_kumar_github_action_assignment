@@ -23,7 +23,7 @@ jobs:
         with:
           python-version: '3.10' 
       - name: success message
-        run: python test/ftest.py 
+        run: cd test/ python test.py 
           
           
       
