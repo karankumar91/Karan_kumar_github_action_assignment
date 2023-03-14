@@ -25,5 +25,5 @@ jobs:
       - name: success message
         run: |
           cd test
-          python test.py 20 30 
+          python test.py 
       
