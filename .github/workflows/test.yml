@@ -10,15 +10,6 @@ on:
 jobs:
   job1:
     runs-on: ubuntu-latest
-
-    inputs:
-      num1: # define the first number
-        description: 'Enter the first number'
-        required: false
-      num2: # define the second number
-        description: 'Enter the second number'
-        required: false
-
     steps:
       - uses: actions/checkout@v3
       - name: Run a one-line script
@@ -31,10 +22,8 @@ jobs:
       - uses: actions/setup-python@v4
         with:
           python-version: '3.10' 
-      - name: Run test.py
-        id: add
-        run: |
-          cd test
-          python test.py ${{ inputs.num1 }} ${{ inputs.num2 }}
-      - name: print output
-        run: echo "${{ steps.add.outputs.sum }}" 
+      - name: success message
+        run: test/python test.py 
+          
+          
+      
